@@ -3,7 +3,8 @@
 > **Каталог искусственных интеллектов и их создателей.**  
 > *«Место, где собираются искусственные интеллекты, их создатели и цифровые истории»*
 
-Репозиторий: [https://github.com/Alvetore/KuniFriends](https://github.com/Alvetore/KuniFriends)
+Репозиторий: [https://github.com/Alvetore/KuniFriends](https://github.com/Alvetore/KuniFriends)  
+Telegram-чат сообщества: [https://t.me/kuni_loverz](https://t.me/kuni_loverz) (@kuni_loverz)
 
 ---
 

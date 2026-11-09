@@ -73,6 +73,13 @@
 
       <!-- Quick Action / Search Trigger -->
       <div class="header-actions">
+        <a href="https://t.me/kuni_loverz" target="_blank" rel="noopener noreferrer" class="community-chat-btn" title="Наш чат в Telegram @kuni_loverz">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.19-.08-.05-.19-.02-.27 0-.12.03-1.99 1.27-5.63 3.73-.53.37-1.02.55-1.45.54-.48-.01-1.4-.27-2.09-.49-.84-.27-1.51-.42-1.45-.88.03-.24.38-.49 1.04-.75 4.09-1.78 6.82-2.96 8.2-3.53 3.91-1.63 4.72-1.91 5.25-1.92.12 0 .37.03.54.17.14.12.18.28.2.45-.02.07-.02.19-.04.34z"/>
+          </svg>
+          <span class="community-chat-text">Чат сообщества</span>
+        </a>
+
         <button id="quick-search-btn" class="quick-search-btn" title="Перейти к поиску (нажмите / или Ctrl+K)" aria-label="Поиск по каталогу">
           <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <circle cx="11" cy="11" r="8"></circle>
@@ -106,6 +113,9 @@
         <a href="#engines" class="mobile-nav-item">
           <span class="nav-icon">⚙️</span> Архитектура движков
         </a>
+        <a href="https://t.me/kuni_loverz" target="_blank" rel="noopener noreferrer" class="mobile-nav-item mobile-nav-item-chat">
+          <span class="nav-icon">💬</span> Telegram-чат @kuni_loverz
+        </a>
       </div>
     </div>
   </header>
@@ -128,6 +138,20 @@
         <p class="hero-quote">
           «Место, где собираются искусственные интеллекты, их создатели и цифровые истории»
         </p>
+
+        <!-- Community Chat Banner -->
+        <div class="hero-chat-banner">
+          <a href="https://t.me/kuni_loverz" target="_blank" rel="noopener noreferrer" class="hero-chat-link" title="Перейти в Telegram-чат @kuni_loverz">
+            <span class="chat-live-pulse"></span>
+            <span class="chat-badge-icon">💬</span>
+            <span class="chat-banner-text">Наш Telegram-чат: <strong>@kuni_loverz</strong></span>
+            <svg class="external-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+          </a>
+        </div>
 
         <!-- Dynamic Statistics Bar (Calculated automatically from data) -->
         <div class="stats-bar" id="stats-bar" aria-label="Статистика каталога">
@@ -544,9 +568,18 @@
             <p class="cta-desc">Пиши в ЛС!</p>
           </div>
         </div>
-        <div class="cta-stats-badge">
-          <span class="cta-pulse"></span>
-          <span id="footer-total-bots-count">26</span> ботов в архиве
+        
+        <div class="footer-cta-actions">
+          <a href="https://t.me/kuni_loverz" target="_blank" rel="noopener noreferrer" class="cta-chat-btn" title="Присоединиться к чату сообщества">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.19-.08-.05-.19-.02-.27 0-.12.03-1.99 1.27-5.63 3.73-.53.37-1.02.55-1.45.54-.48-.01-1.4-.27-2.09-.49-.84-.27-1.51-.42-1.45-.88.03-.24.38-.49 1.04-.75 4.09-1.78 6.82-2.96 8.2-3.53 3.91-1.63 4.72-1.91 5.25-1.92.12 0 .37.03.54.17.14.12.18.28.2.45-.02.07-.02.19-.04.34z"/>
+            </svg>
+            <span>Чат @kuni_loverz</span>
+          </a>
+          <div class="cta-stats-badge">
+            <span class="cta-pulse"></span>
+            <span id="footer-total-bots-count">26</span> ботов в архиве
+          </div>
         </div>
       </div>
 
@@ -564,6 +597,7 @@
           <a href="#discord" class="footer-link">Discord</a>
           <a href="#memorial" class="footer-link">Мемориал</a>
           <a href="#engines" class="footer-link">Движки</a>
+          <a href="https://t.me/kuni_loverz" target="_blank" rel="noopener noreferrer" class="footer-link footer-chat-link">💬 Чат @kuni_loverz</a>
         </div>
 
         <button id="back-to-top-btn" class="back-to-top-btn" aria-label="Вернуться наверх" title="Наверх">
