@@ -195,9 +195,9 @@ const BOTS_DATA = [
     memorialCategory: null
   },
   {
-    id: 'neurocutie',
-    name: 'NeurocutieWoW',
-    username: 'NeurocutieWoW',
+    id: 'vexa',
+    name: 'Vexa',
+    username: 'VexaWoW',
     platform: 'telegram',
     owner: 'Fafagmon',
     core: 'custom',
