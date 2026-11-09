@@ -438,10 +438,13 @@ const ENGINES_DATA = [
   {
     id: 'kuni',
     name: 'kuni',
-    featured: false,
+    featured: true,
     tag: 'Original Core',
-    description: 'Оригинальный базовый движок сообщества, заложивший архитектурную основу для последующих модификаций.',
-    team: []
+    description: 'Оригинальное базовое ядро бота Куни (@kunii_chan), созданное автором @alex2772sc. Послужило фундаментом для всего сообщества и вдохновило создание NIVA, Kuni+ и других кастомных разработок.',
+    team: [
+      { role: 'Оригинальный бот', username: 'kunii_chan' },
+      { role: 'Создатель ядра', username: 'alex2772sc' }
+    ]
   },
   {
     id: 'custom',

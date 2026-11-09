@@ -41,6 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Engine Section Counts
     engineCountNiva: document.getElementById('engine-count-niva'),
+    engineCountKuni: document.getElementById('engine-count-kuni'),
     engineCountKuniPlus: document.getElementById('engine-count-kuni-plus'),
 
     // Containers
@@ -230,10 +231,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Update Engine section counters
     const nivaBots = BOTS_DATA.filter(b => b.core && b.core.toLowerCase().includes('niva'));
+    const kuniBots = BOTS_DATA.filter(b => b.core && b.core.toLowerCase() === 'kuni');
     const kuniPlusBots = BOTS_DATA.filter(b => b.core && b.core.toLowerCase().includes('kuni+'));
 
     if (elements.engineCountNiva) {
       elements.engineCountNiva.innerHTML = `Ботов на этом ядре: <strong>${nivaBots.length}</strong> (${nivaBots.map(b => b.memorial ? `${b.name} [архив]` : b.name).join(', ')})`;
+    }
+    if (elements.engineCountKuni) {
+      elements.engineCountKuni.innerHTML = `Ботов на этом ядре: <strong>${kuniBots.length}</strong> (${kuniBots.map(b => b.memorial ? `${b.name} [архив]` : b.name).join(', ')})`;
     }
     if (elements.engineCountKuniPlus) {
       elements.engineCountKuniPlus.innerHTML = `Ботов на этом ядре: <strong>${kuniPlusBots.length}</strong> (${kuniPlusBots.map(b => b.memorial ? `${b.name} [архив]` : b.name).join(', ')})`;

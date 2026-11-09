@@ -1675,6 +1675,18 @@ body {
   transform: translateY(-2px);
 }
 
+.engine-card-kuni {
+  background: linear-gradient(135deg, rgba(16, 28, 54, 0.85) 0%, rgba(12, 18, 34, 0.85) 100%);
+  border-color: rgba(59, 130, 246, 0.4);
+  box-shadow: 0 10px 30px -10px rgba(59, 130, 246, 0.18);
+}
+
+.engine-card-kuni:hover {
+  border-color: #60a5fa;
+  box-shadow: 0 14px 40px -10px rgba(59, 130, 246, 0.32);
+  transform: translateY(-2px);
+}
+
 .engine-card-kuni-plus {
   background: linear-gradient(135deg, rgba(10, 24, 38, 0.8) 0%, rgba(12, 16, 28, 0.8) 100%);
   border-color: rgba(0, 240, 255, 0.3);
@@ -1714,6 +1726,12 @@ body {
   background: rgba(168, 85, 247, 0.2);
   color: #d8b4fe;
   border: 1px solid rgba(168, 85, 247, 0.4);
+}
+
+.engine-tag-original {
+  background: rgba(59, 130, 246, 0.2);
+  color: #93c5fd;
+  border: 1px solid rgba(59, 130, 246, 0.45);
 }
 
 .engine-tag-evolution {
