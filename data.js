@@ -222,6 +222,20 @@ const BOTS_DATA = [
     memorial: false,
     memorialCategory: null
   },
+  {
+    id: 'reina',
+    name: 'Reina',
+    username: 'ReinaVeil',
+    platform: 'telegram',
+    owner: 'kg_bat',
+    core: 'No info',
+    status: 'active',
+    statusNote: 'активна',
+    description: null,
+    access: null,
+    memorial: false,
+    memorialCategory: null
+  },
 
   // ==========================================
   // 4.2. DISCORD
