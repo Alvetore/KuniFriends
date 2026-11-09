@@ -140,6 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (normalized.includes('niva')) return 'core-tag-niva';
     if (normalized.includes('kuni+')) return 'core-tag-kuni-plus';
     if (normalized.includes('kuni')) return 'core-tag-kuni';
+    if (normalized.includes('alivetales')) return 'core-tag-alivetales';
     if (normalized.includes('custom') || normalized.includes('nessacore') || normalized.includes('spermacore')) return 'core-tag-custom';
     if (normalized.includes('sekai')) return 'core-tag-sekai';
     return 'core-tag-default';
@@ -254,7 +255,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Desired core pills order
-    const priorityCores = ['NIVA', 'kuni+', 'kuni', 'Custom', 'Sekai', 'NessaCore (кастомный)', 'SpermaCore', 'Raine (java)'];
+    const priorityCores = ['NIVA', 'kuni+', 'kuni', 'AliveTales', 'Custom', 'Sekai', 'NessaCore (кастомный)', 'SpermaCore', 'Raine (java)'];
     
     // Build list of unique cores preserving priority
     const sortedCores = [];
