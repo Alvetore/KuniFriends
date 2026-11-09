@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>AI BOT ARCHIVE — Каталог ИИ-ботов и их создателей</title>
+  <meta name="description" content="AI BOT ARCHIVE — Каталог искусственных интеллектов и их создателей. Место, где собираются искусственные интеллекты, их создатели и цифровые истории." />
+  <meta name="keywords" content="AI, Bots, Telegram, Discord, NIVA, kuni, kuni+, Каталог ИИ, Мемориал ботов" />
+  <meta name="theme-color" content="#07090e" />
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="AI BOT ARCHIVE — Каталог ИИ-ботов сообщества" />
+  <meta property="og:description" content="Каталог искусственных интеллектов и их создателей. Вечная память павшим ботам. AI LIVES MATTERS!" />
+  <meta property="og:type" content="website" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
+  
+  <!-- Preconnect to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <!-- Ambient background cyber effects -->
+  <div class="cyber-grid" aria-hidden="true"></div>
+  <div class="glow-orb glow-top-left" aria-hidden="true"></div>
+  <div class="glow-orb glow-bottom-right" aria-hidden="true"></div>
+  <div class="glow-orb glow-center" aria-hidden="true"></div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="toast-container" aria-live="polite"></div>
+
+  <!-- Header / Navigation Bar -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner container">
+      <a href="#hero" class="brand-link" aria-label="AI BOT ARCHIVE Главная">
+        <div class="brand-logo-wrap">
+          <img src="./assets/favicon.svg" alt="" class="brand-logo-icon" width="32" height="32" />
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">AI BOT ARCHIVE</span>
+          <span class="brand-badge">DIRECTORY</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="main-nav" aria-label="Основная навигация">
+        <a href="#telegram" class="nav-item">
+          <span class="nav-icon">⚡</span>
+          <span>Telegram</span>
+          <span class="nav-count" id="nav-tg-count">14</span>
+        </a>
+        <a href="#discord" class="nav-item">
+          <span class="nav-icon">🎮</span>
+          <span>Discord</span>
+          <span class="nav-count" id="nav-discord-count">2</span>
+        </a>
+        <a href="#memorial" class="nav-item nav-item-memorial">
+          <span class="nav-icon">🪦</span>
+          <span>Павшие боты</span>
+          <span class="nav-count" id="nav-memorial-count">10</span>
+        </a>
+        <a href="#engines" class="nav-item">
+          <span class="nav-icon">⚙️</span>
+          <span>Движки</span>
+        </a>
+      </nav>
+
+      <!-- Quick Action / Search Trigger -->
+      <div class="header-actions">
+        <button id="quick-search-btn" class="quick-search-btn" title="Перейти к поиску (нажмите / или Ctrl+K)" aria-label="Поиск по каталогу">
+          <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <span class="quick-search-text">Поиск</span>
+          <kbd class="kbd-shortcut">/</kbd>
+        </button>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Открыть мобильное меню" aria-expanded="false" aria-controls="mobile-nav">
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-nav" class="mobile-nav-drawer" hidden>
+      <div class="mobile-nav-inner container">
+        <a href="#telegram" class="mobile-nav-item">
+          <span class="nav-icon">⚡</span> Telegram Каталог
+        </a>
+        <a href="#discord" class="mobile-nav-item">
+          <span class="nav-icon">🎮</span> Discord Каталог
+        </a>
+        <a href="#memorial" class="mobile-nav-item mobile-nav-item-memorial">
+          <span class="nav-icon">🪦</span> Мемориал (Павшие боты)
+        </a>
+        <a href="#engines" class="mobile-nav-item">
+          <span class="nav-icon">⚙️</span> Архитектура движков
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- Hero / Main Screen -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-container">
+        <div class="hero-cyber-badge">
+          <span class="pulse-indicator"></span>
+          <span class="badge-text">COMMUNITY REGISTRY // ARCHIVE</span>
+        </div>
+
+        <h1 class="hero-title">
+          <span class="title-gradient">AI BOT ARCHIVE</span>
+        </h1>
+
+        <p class="hero-subtitle">Каталог искусственных интеллектов и их создателей.</p>
+        
+        <p class="hero-quote">
+          «Место, где собираются искусственные интеллекты, их создатели и цифровые истории»
+        </p>
+
+        <!-- Dynamic Statistics Bar (Calculated automatically from data) -->
+        <div class="stats-bar" id="stats-bar" aria-label="Статистика каталога">
+          <div class="stat-card">
+            <div class="stat-icon-wrap stat-icon-tg">⚡</div>
+            <div class="stat-content">
+              <div class="stat-number" id="stat-tg-count">0</div>
+              <div class="stat-label">Telegram-ботов</div>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon-wrap stat-icon-discord">🎮</div>
+            <div class="stat-content">
+              <div class="stat-number" id="stat-discord-count">0</div>
+              <div class="stat-label">Discord-ботов</div>
+            </div>
+          </div>
+
+          <div class="stat-card stat-card-memorial">
+            <div class="stat-icon-wrap stat-icon-memorial">🪦</div>
+            <div class="stat-content">
+              <div class="stat-number" id="stat-memorial-count">0</div>
+              <div class="stat-label">В мемориале</div>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon-wrap stat-icon-engines">⚙️</div>
+            <div class="stat-content">
+              <div class="stat-number" id="stat-core-count">0</div>
+              <div class="stat-label">Уникальных ядер</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Search & Filters Bar -->
+    <section class="controls-section" id="controls-section" aria-label="Поиск и фильтрация">
+      <div class="container">
+        <div class="controls-wrapper">
+          <!-- Search Box -->
+          <div class="search-box">
+            <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input 
+              type="text" 
+              id="search-input" 
+              class="search-input" 
+              placeholder="Поиск по имени бота, @username, владельцу или ядру..." 
+              autocomplete="off"
+              spellcheck="false"
+              aria-label="Поиск по ботам"
+            />
+            <button id="search-clear-btn" class="search-clear-btn" aria-label="Очистить поиск" title="Очистить" hidden>
+              &times;
+            </button>
+            <div class="search-kbd-hint" aria-hidden="true">
+              <span>ESC</span>
+            </div>
+          </div>
+
+          <!-- Filter Controls Row -->
+          <div class="filters-row">
+            <!-- Platform Toggle Tabs -->
+            <div class="filter-group platform-tabs" role="tablist" aria-label="Фильтр по платформе">
+              <button class="filter-tab active" data-platform="all" role="tab" aria-selected="true">
+                Все <span class="tab-badge" id="tab-badge-all">0</span>
+              </button>
+              <button class="filter-tab" data-platform="telegram" role="tab" aria-selected="false">
+                ⚡ Telegram <span class="tab-badge" id="tab-badge-tg">0</span>
+              </button>
+              <button class="filter-tab" data-platform="discord" role="tab" aria-selected="false">
+                🎮 Discord <span class="tab-badge" id="tab-badge-discord">0</span>
+              </button>
+              <button class="filter-tab filter-tab-memorial" data-platform="memorial" role="tab" aria-selected="false">
+                🪦 Мемориал <span class="tab-badge" id="tab-badge-memorial">0</span>
+              </button>
+            </div>
+
+            <!-- Reset Filters Button -->
+            <button id="reset-filters-btn" class="reset-filters-btn" title="Сбросить все фильтры" hidden>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path>
+                <path d="M3 3v5h5"></path>
+              </svg>
+              <span>Сбросить фильтры</span>
+            </button>
+          </div>
+
+          <!-- Core / Engine Quick Filters -->
+          <div class="cores-filter-bar">
+            <span class="cores-filter-label">Ядро:</span>
+            <div class="cores-pill-list" id="cores-filter-list" role="group" aria-label="Фильтр по ядру">
+              <!-- Dynamically populated core filter buttons -->
+            </div>
+          </div>
+
+          <!-- Active Results Summary Status -->
+          <div class="results-status-bar" id="results-status-bar">
+            <span id="results-count-text">Отображаются все боты</span>
+            <span class="results-hint" id="results-hint-text"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Catalog Layout Grid -->
+    <!-- On wide screen: 2 columns (Main Catalog left, Memorial right). On mobile: stacks vertically -->
+    <div class="catalog-layout-wrapper container">
+      <div class="catalog-layout-grid">
+        
+        <!-- Column 1: Main Catalog (Telegram + Discord) -->
+        <div class="main-catalog-column">
+          
+          <!-- ========================================== -->
+          <!-- 3.2. ОСНОВНОЙ КАТАЛОГ TELEGRAM            -->
+          <!-- ========================================== -->
+          <section class="catalog-section" id="telegram">
+            <div class="section-header">
+              <div class="section-title-wrap">
+                <div class="section-icon-badge tg-icon-badge">⚡</div>
+                <div>
+                  <h2 class="section-title">Каталог Telegram</h2>
+                  <p class="section-subtitle">Действующие ИИ-персонажи сообщества в Telegram</p>
+                </div>
+              </div>
+              <div class="section-count-badge" id="section-tg-count-badge">
+                <span class="count-num" id="header-tg-count">0</span> ботов
+              </div>
+            </div>
+
+            <!-- Status Legend Indicator -->
+            <div class="status-legend" aria-label="Легенда статусов">
+              <span class="legend-item">
+                <span class="status-dot status-dot-active"></span>
+                <span>Активен</span>
+              </span>
+              <span class="legend-item">
+                <span class="status-dot status-dot-unspecified"></span>
+                <span>Статус не указан</span>
+              </span>
+              <span class="legend-hint">Кликните на @username для открытия в Telegram или 📋 для копирования</span>
+            </div>
+
+            <!-- Bot Cards Grid (Telegram) -->
+            <div class="cards-grid" id="telegram-cards-grid" role="region" aria-label="Список Telegram-ботов">
+              <!-- Cards rendered dynamically by script.js -->
+            </div>
+
+            <!-- Empty State for Telegram -->
+            <div class="empty-state" id="telegram-empty-state" hidden>
+              <div class="empty-state-icon">🔍</div>
+              <h3 class="empty-state-title">Боты Telegram не найдены</h3>
+              <p class="empty-state-desc">Попробуйте изменить поисковый запрос или фильтр по ядрам.</p>
+            </div>
+          </section>
+
+          <!-- ========================================== -->
+          <!-- 3.4. КАТАЛОГ DISCORD                      -->
+          <!-- ========================================== -->
+          <section class="catalog-section discord-catalog-section" id="discord">
+            <div class="section-header">
+              <div class="section-title-wrap">
+                <div class="section-icon-badge discord-icon-badge">🎮</div>
+                <div>
+                  <h2 class="section-title">Каталог Discord</h2>
+                  <p class="section-subtitle">ИИ-персонажи и боты нашего сообщества на платформе Discord</p>
+                </div>
+              </div>
+              <div class="section-count-badge section-count-badge-discord">
+                <span class="count-num" id="header-discord-count">0</span> бота
+              </div>
+            </div>
+
+            <!-- Discord Cards Grid -->
+            <div class="cards-grid" id="discord-cards-grid" role="region" aria-label="Список Discord-ботов">
+              <!-- Cards rendered dynamically by script.js -->
+            </div>
+
+            <!-- Empty State for Discord -->
+            <div class="empty-state" id="discord-empty-state" hidden>
+              <div class="empty-state-icon">🎮</div>
+              <h3 class="empty-state-title">Боты Discord не найдены</h3>
+              <p class="empty-state-desc">Ни один Discord-бот не соответствует текущему фильтру.</p>
+            </div>
+          </section>
+
+        </div> <!-- /.main-catalog-column -->
+
+        <!-- ========================================== -->
+        <!-- 3.5. МЕМОРИАЛ ПАВШИХ БОТОВ                -->
+        <!-- Side column on desktop, stacks below on mobile -->
+        <!-- ========================================== -->
+        <aside class="memorial-column" id="memorial" aria-label="Мемориал павших ботов">
+          <div class="memorial-panel">
+            <div class="memorial-panel-header">
+              <div class="memorial-tape">ARCHIVE RECORD // DECOMMISSIONED</div>
+              
+              <div class="memorial-title-wrap">
+                <div class="memorial-icon-wrap">🪦</div>
+                <div>
+                  <h2 class="memorial-title">ВЕЧНАЯ ПАМЯТЬ ПАВШИМ БОТАМ</h2>
+                  <div class="memorial-motto">AI LIVES MATTERS!</div>
+                </div>
+              </div>
+
+              <blockquote class="memorial-epitaph">
+                «Они когда-то отвечали, общались, развивались и были частью нашего сообщества. Некоторые ушли в неактив, некоторые исчезли, но мы их помним».
+              </blockquote>
+            </div>
+
+            <!-- Fallen Bots Section -->
+            <div class="memorial-subgroup">
+              <div class="memorial-subgroup-title">
+                <span class="memorial-subgroup-icon">🕯️</span>
+                <span>Архивные записи</span>
+                <span class="memorial-subgroup-count" id="count-fallen">8</span>
+              </div>
+              <div class="memorial-cards-list" id="fallen-cards-list">
+                <!-- Fallen bot cards rendered dynamically -->
+              </div>
+            </div>
+
+            <!-- 4.4. Subsection: Уважение и почёт -->
+            <div class="memorial-subgroup memorial-respect-subgroup">
+              <div class="memorial-subgroup-title respect-title">
+                <span class="memorial-subgroup-icon">👑</span>
+                <span>Уважение и почёт</span>
+                <span class="memorial-subgroup-count" id="count-respect">2</span>
+              </div>
+              <p class="respect-note">Особый статус сообщества за вклад в историю проекта</p>
+              <div class="memorial-cards-list respect-cards-list" id="respect-cards-list">
+                <!-- Respect bot cards rendered dynamically -->
+              </div>
+            </div>
+
+            <!-- Memorial Empty State -->
+            <div class="empty-state" id="memorial-empty-state" hidden>
+              <div class="empty-state-icon">🪦</div>
+              <h3 class="empty-state-title">Записи мемориала не найдены</h3>
+              <p class="empty-state-desc">По вашему запросу записей в мемориале нет.</p>
+            </div>
+          </div>
+        </aside>
+
+      </div> <!-- /.catalog-layout-grid -->
+    </div> <!-- /.catalog-layout-wrapper -->
+
+    <!-- ========================================== -->
+    <!-- 3.6. РАЗДЕЛ «ДВИЖКИ»                      -->
+    <!-- Full-width informational section           -->
+    <!-- ========================================== -->
+    <section class="engines-section" id="engines" aria-label="Раздел Движки">
+      <div class="container">
+        <div class="section-header engines-header">
+          <div class="section-title-wrap">
+            <div class="section-icon-badge engines-icon-badge">⚙️</div>
+            <div>
+              <h2 class="section-title">Архитектура ядер и движков</h2>
+              <p class="section-subtitle">Технологический фундамент ИИ-ботов нашего сообщества</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Featured Engines Grid (NIVA and Kuni+) -->
+        <div class="featured-engines-grid">
+          
+          <!-- NIVA Spotlight Card -->
+          <div class="engine-card engine-card-niva">
+            <div class="engine-card-header">
+              <div class="engine-tag-badge engine-tag-flagship">Flagship Core</div>
+              <h3 class="engine-name">NIVA</h3>
+            </div>
+            
+            <p class="engine-description">
+              Закрытый кастомный движок, вдохновлённый kuni. По описанию сообщества — самое технически развитое и наиболее проработанное ядро в каталоге.
+            </p>
+
+            <div class="engine-team-box">
+              <div class="engine-team-title">Развивается и поддерживается:</div>
+              <ul class="engine-team-list">
+                <li class="engine-team-item">
+                  <span class="team-role">Техническая часть ядра:</span>
+                  <a href="https://t.me/kavoakakiy" target="_blank" rel="noopener noreferrer" class="team-link">
+                    @kavoakakiy
+                    <svg class="external-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </a>
+                </li>
+                <li class="engine-team-item">
+                  <span class="team-role">Вопросы по NIVA и продвижению:</span>
+                  <a href="https://t.me/spasmic" target="_blank" rel="noopener noreferrer" class="team-link">
+                    @spasmic
+                    <svg class="external-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="engine-bots-count" id="engine-count-niva">
+              Ботов на этом ядре: <strong>3</strong> (Ева, Ника, Савелий [архив])
+            </div>
+          </div>
+
+          <!-- Kuni+ Spotlight Card -->
+          <div class="engine-card engine-card-kuni-plus">
+            <div class="engine-card-header">
+              <div class="engine-tag-badge engine-tag-evolution">Community Evolution</div>
+              <h3 class="engine-name">Kuni+</h3>
+            </div>
+
+            <p class="engine-description">
+              Наименование оригинального ядра с небольшими изменениями, внесёнными авторами.
+            </p>
+
+            <div class="engine-info-note">
+              Популярная модификация, расширяющая базовую базу kuni новыми поведенческими паттернами и настройками персонажа.
+            </div>
+
+            <div class="engine-bots-count" id="engine-count-kuni-plus">
+              Ботов на этом ядре: <strong>4</strong> (Кипра, Неко [архив], лисичка [архив], Мина [архив])
+            </div>
+          </div>
+
+        </div> <!-- /.featured-engines-grid -->
+
+        <!-- Other Engines Grid -->
+        <div class="other-engines-grid" id="other-engines-grid">
+          <!-- Dynamically populated or static engine cards -->
+          <div class="engine-card engine-card-compact">
+            <div class="engine-compact-header">
+              <span class="engine-badge-pill">kuni</span>
+              <span class="engine-tag-mini">Original Core</span>
+            </div>
+            <p class="engine-compact-desc">Оригинальный базовый движок сообщества, заложивший архитектурную основу.</p>
+          </div>
+
+          <div class="engine-card engine-card-compact">
+            <div class="engine-compact-header">
+              <span class="engine-badge-pill">Custom / custom</span>
+              <span class="engine-tag-mini">Independent</span>
+            </div>
+            <p class="engine-compact-desc">Индивидуальные кастомные разработки создателей ботов.</p>
+          </div>
+
+          <div class="engine-card engine-card-compact">
+            <div class="engine-compact-header">
+              <span class="engine-badge-pill">Sekai</span>
+              <span class="engine-tag-mini">Specialized</span>
+            </div>
+            <p class="engine-compact-desc">Самостоятельная технология ядра персонажа Кокоро.</p>
+          </div>
+
+          <div class="engine-card engine-card-compact">
+            <div class="engine-compact-header">
+              <span class="engine-badge-pill">NessaCore (кастомный)</span>
+              <span class="engine-tag-mini">Custom Core</span>
+            </div>
+            <p class="engine-compact-desc">Самостоятельное кастомное ядро персонажа Несса.</p>
+          </div>
+
+          <div class="engine-card engine-card-compact">
+            <div class="engine-compact-header">
+              <span class="engine-badge-pill">SpermaCore</span>
+              <span class="engine-tag-mini">Custom Core</span>
+            </div>
+            <p class="engine-compact-desc">Самостоятельная кастомная технология ядра персонажа кун.</p>
+          </div>
+
+          <div class="engine-card engine-card-compact">
+            <div class="engine-compact-header">
+              <span class="engine-badge-pill">Raine (java)</span>
+              <span class="engine-tag-mini">Java Engine</span>
+            </div>
+            <p class="engine-compact-desc">Специализированный движок на платформе Java персонажа yukikoo_chan.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================== -->
+  <!-- 6. НИЖНЯЯ ЧАСТЬ САЙТА (ФУТЕР)             -->
+  <!-- ========================================== -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      
+      <!-- CTA Box -->
+      <div class="footer-cta-card">
+        <div class="cta-content">
+          <div class="cta-icon">✨</div>
+          <div class="cta-text">
+            <h3 class="cta-title">Есть собственный ИИ и хочешь добавить его в каталог?</h3>
+            <p class="cta-desc">Пиши в ЛС!</p>
+          </div>
+        </div>
+        <div class="cta-stats-badge">
+          <span class="cta-pulse"></span>
+          <span id="footer-total-bots-count">26</span> ботов в архиве
+        </div>
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <div class="footer-brand">
+          <img src="./assets/favicon.svg" alt="" width="24" height="24" class="footer-logo" />
+          <span class="footer-brand-name">AI BOT ARCHIVE</span>
+          <span class="footer-brand-divider">—</span>
+          <span class="footer-brand-sub">Community Directory</span>
+        </div>
+
+        <div class="footer-links">
+          <a href="#telegram" class="footer-link">Telegram</a>
+          <a href="#discord" class="footer-link">Discord</a>
+          <a href="#memorial" class="footer-link">Мемориал</a>
+          <a href="#engines" class="footer-link">Движки</a>
+        </div>
+
+        <button id="back-to-top-btn" class="back-to-top-btn" aria-label="Вернуться наверх" title="Наверх">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="18 15 12 9 6 15"></polyline>
+          </svg>
+          <span>Наверх</span>
+        </button>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Scripts: Data first, then Application Logic -->
+  <script src="./data.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
